@@ -1,0 +1,30 @@
+<div class="main-content">
+  <div class="container-fluid">
+  <div class="card">
+  <div class="card-header card-header-danger">
+    <h4 class="card-title">Material Dashboard Heading</h4>
+    <p class="card-category">Created using Roboto Font Family</p>
+  </div>
+  <div class="card-body">
+  <div id="typography">
+  <div class="card-title">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let indexEvento of obtenerDatosEventoActivo, index as i">
+
+   <h4>ID De Evento:  {{indexEvento.eventoId}}</h4>
+   <h5 >Nombre De Evento:  {{indexEvento.eventoNombre}}</h5>
+   <h6 >Fecha De Evento:  {{indexEvento.eventoFecha}}</h6>
+   <h6 >Fecha De Evento:  {{i}}</h6>
+   <a [routerLink]="['/lista-equipo',i]" >Leer más...</a>
+   <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="indexEditar(indexEquipo)" data-toggle="modal" data-target="#exampleModal">Calificar</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteEquipoServicio(indexEquipo.equipoId)" >Eliminar</button>
+    </div>
+      </li>
+        </ul>
+   </div>
+   
+   </div>
+   </div>
+   </div>
+</div>
